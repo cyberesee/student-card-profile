@@ -10,3 +10,9 @@ name.textContent = "Mary Therese Guevarra";
 desc.textContent = "BSIS2 student at La Verdad Christian College.";
 avatar.src = "assets/images/therese.png";
 avatar.alt = "Mary Therese Guevarra";
+
+//append profile card
+const profileContainer = document.getElementById("profile-container");
+profileContainer.appendChild(name);
+profileContainer.appendChild(desc);
+profileContainer.appendChild(avatar);
