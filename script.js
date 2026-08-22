@@ -1,3 +1,5 @@
+//script.js for card.js
+
 //generate elements
 const name = document.createElement("h2");
 const desc = document.createElement("p");
