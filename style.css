@@ -34,14 +34,6 @@ body.dark {
   border-radius: 10px;
   padding: 8px 10px;
 }
-.field-label {
-  display: block;
-  text-align: left;
-  font-size: 0.75rem;
-  color: #fff;
-  opacity: 0.85;
-  margin-bottom: 4px;
-}
 
 .student-input,
 .course-input {
@@ -56,11 +48,6 @@ body.dark {
   box-sizing: border-box;
 }
 
-.button-row {
-  display: flex;
-  gap: 8px;
-  margin-top: 4px;
-}
 .btn {
   flex: 1;
   padding: 9px 10px;
@@ -99,9 +86,4 @@ body.dark {
 }
 .registration-result.show {
   display: block;
-}
-.hint {
-  margin: 16px 0 0;
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.75);
 }
