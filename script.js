@@ -36,7 +36,7 @@ const registerBtn = document.createElement("button"); //para magkaroon ng functi
 const registrationMessage = document.createElement ("p");
 const studentForm = document.createElement ("form");
 
-// id for getElementById
+//id for getElementById
 studentName.id = "nameInput";
 welcomeMessage.id = "welcomeMessage";
 studentForm.id = "studentForm";
@@ -82,6 +82,65 @@ profileContainer.appendChild(studentForm);
 profileContainer.appendChild(registrationMessage);
 
 //part 1
+document.getElementById("nameInput").addEventListener("input", () => {
+  const nameField = document.getElementById("nameInput");
+  const welcomeField = document.getElementById("welcomeMessage");
+  const value = nameField.value.trim();
+  if (value) {
+    welcomeField.textContent = `Welcome, ${value}!`;
+  } else {
+    welcomeField.textContent = "Please enter your name to begin registration.";
+  }
+});
+
+//part 2
+document.getElementById("studentForm").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const name = document.getElementById("nameInput").value.trim();
+  const course = studentCourse.value;
+  if (!name) {
+    registrationMessage.textContent = "Please enter your name before registering.";
+  } else {
+    registrationMessage.textContent = `${name} has been registered for ${course}.`;
+  }
+  registrationMessage.classList.add("show");
+});
+
+//part 3
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
+//part 4
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    studentName.value = "";
+    welcomeMessage.textContent = "Please enter your full name in this form.";
+  }
+});
+
+
+/*
+Relection Questions and Answers
+1. Event Prevention
+- Why is event.preventDefault() necessary when handling form submissions?
+Answer: Kaya po kailangan ng event.preventDefault() kapag may form submission 
+is para maprevent yung pag reload ng page pagka-pindot ng button.
+
+2. Stage Toggling
+- How does classList.toggle() simplify dynamic theme switching?
+Answer: Mas napapadali niya po ito kasi po ito yung sa manually checking if existing ba
+yung class kaysa gagamit pa po ng if and else na logic.
+
+3. Input vs. Keydown
+- What is the practical difference between the input and keydown event listeners?
+Answer: Yung input po for value change siya and hindi pinapakita kung ano yung mga naka press na keys
+or in short for preview lang, pero yung keydown po ginagamit siya to identify yung na press na key
+tulad nung sa part 4 so once na-click si escape key automatic may reaction po yung js.
+*/
+
+/*
+//part 1
 studentName.addEventListener("input", () => {
   const value = studentName.value.trim();
   if (value) {
@@ -104,36 +163,5 @@ studentForm.addEventListener("submit", (event) => {
   }
   registrationMessage.classList.add("show");
 });
-
-//part 3
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-});
-
-//part 4
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    studentName.value = "";
-    welcomeMessage.textContent = "Please enter your full name in this form.";
-  }
-});
-
-/*
-Relection Questions and Answers
-1. Event Prevention
-- Why is event.preventDefault() necessary when handling form submissions?
-Answer: Kaya po kailangan ng event.preventnDefault() kapag may form submission 
-is para maprevent yung pag reload ng page pagka-pindot ng button.
-
-2. Stage Toggling
-- How does classList.toggle() simplify dynamic theme switching?
-Answer: Mas napapadali niya po ito kasi po ito yung sa manually checking if existing ba
-yung class kaysa gagamit pa po ng if and else na logic.
-
-3. Input vs. Keydown
-- What is the practical difference between the input and keydown event listeners?
-Answer: Yung input po for value change siya and hindi pinapakita kung ano yung mga naka press na keys
-or in short for preview lang, pero yung keydown po ginagamit siya to identify yung na press na key
-tulad nung sa part 4 so once na-click si escape key automatic may reaction po yung js.
 */
 
