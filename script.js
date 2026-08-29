@@ -100,4 +100,8 @@ studentForm.addEventListener("submit", (event) => {
   registrationMessage.classList.add("show");
 });
 
+//part 3
+themeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
 
