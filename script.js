@@ -36,6 +36,11 @@ const registerBtn = document.createElement("button"); //para magkaroon ng functi
 const registrationMessage = document.createElement ("p");
 const studentForm = document.createElement ("form");
 
+// id for getElementById
+studentName.id = "nameInput";
+welcomeMessage.id = "welcomeMessage";
+studentForm.id = "studentForm";
+
 //populate content & styles
 welcomeMessage.textContent = "Please enter your full name in this form.";
 welcomeMessage.className = "welcome-message";
