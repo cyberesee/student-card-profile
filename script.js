@@ -112,3 +112,23 @@ document.addEventListener("keydown", (event) => {
     welcomeMessage.textContent = "Please enter your full name in this form.";
   }
 });
+
+/*
+Relection Questions and Answers
+1. Event Prevention
+- Why is event.preventionDefault() necessary when handling form submissions?
+Answer: Kaya po kailangan ng event.preventionDefault() kapag may form submission 
+is para maprevent yung pag reload ng page pagka-pindot ng button.
+
+2. Stage Toggling
+- How does classList.toggle() simplify dynamic theme switching?
+Answer: Mas napapadali niya po ito kasi po ito yung sa manually checking if existing ba
+yung class kaysa gagamit pa po ng if and else na logic.
+
+3. Input vs. Keydown
+- What is the practical difference between the input and keydown event listeners?
+Answer: Yung input po for value change siya and hindi pinapakita kung ano yung mga naka press na keys
+or in short for preview lang, pero yung keydown po ginagamit siya to identify yung na press na key
+tulad nung sa part 4 so once na-click si escape key automatic may reaction po yung js.
+*/
+
