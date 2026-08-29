@@ -105,3 +105,10 @@ themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
 
+//part 4
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    studentName.value = "";
+    welcomeMessage.textContent = "Please enter your full name in this form.";
+  }
+});
