@@ -43,12 +43,19 @@ studentName.type = "text";
 studentName.placeholder = "Enter your full name";
 studentName.className = "student-input";
 
-studentCourse.className = "course-input";
+studentCourse.className = "course-input"; //suggested looping sa google
+["BSIS", "BSAIS", "BSA", "BAB", "BSSW"].forEach((course) => {
+  const option = document.createElement("option");
+  option.value = course;
+  option.textContent = course;
+  studentCourse.appendChild(option);
+});
 
 themeBtn.type = "button";
 themeBtn.textContent = "Change Theme";
 themeBtn.className = "theme-toggle";
 
+registrationMessage.className = "registration-result"
 studentForm.className = "registration-form";
 
 //append registration card
@@ -57,3 +64,5 @@ profileContainer.classList.add("profile-card");
 profileContainer.appendChild(welcomeMessage);
 profileContainer.appendChild(studentForm);
 profileContainer.appendChild(registrationMessage);
+
+
