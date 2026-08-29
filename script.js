@@ -116,8 +116,8 @@ document.addEventListener("keydown", (event) => {
 /*
 Relection Questions and Answers
 1. Event Prevention
-- Why is event.preventionDefault() necessary when handling form submissions?
-Answer: Kaya po kailangan ng event.preventionDefault() kapag may form submission 
+- Why is event.preventDefault() necessary when handling form submissions?
+Answer: Kaya po kailangan ng event.preventnDefault() kapag may form submission 
 is para maprevent yung pag reload ng page pagka-pindot ng button.
 
 2. Stage Toggling
