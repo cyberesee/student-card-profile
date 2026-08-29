@@ -25,7 +25,7 @@ profileContainer.appendChild(desc);
 profileContainer.appendChild(avatar);
 */
 
-//script for student-registration-card
+//script for student-registration-card, note: ang ginawa ko po instead na nameInput ang variable, studentName po nilagay ko
 
 //generate elements
 const welcomeMessage = document.createElement ("p");
@@ -86,6 +86,18 @@ studentName.addEventListener("input", () => {
   }
 });
 
+//part 2
+studentForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const name = studentName.value.trim();
+  const course = studentCourse.value;
 
+  if (!name) {
+    registrationMessage.textContent = "Please enter your name before registering.";
+  } else {
+    registrationMessage.textContent = `${name} has been registered for ${course}.`;
+  }
+  registrationMessage.classList.add("show");
+});
 
 
