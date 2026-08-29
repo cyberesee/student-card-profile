@@ -1,3 +1,4 @@
+/*
 //script.js for card.js (first file name na nalagay)
 
 //generate elements
@@ -22,3 +23,37 @@ profileContainer.classList.add("profile-card");
 profileContainer.appendChild(name);
 profileContainer.appendChild(desc);
 profileContainer.appendChild(avatar);
+*/
+
+//script for student-registration-card
+
+//generate elements
+const welcomeMessage = document.createElement ("p");
+const studentName = document.createElement ("input");
+const studentCourse = document.createElement ("select");
+const themeBtn = document.createElement ("button");
+const registrationMessage = document.createElement ("p");
+const studentForm = document.createElement ("form");
+
+//populate content & styles
+welcomeMessage.textContent = "Please enter your full name in this form.";
+welcomeMessage.className = "welcome-message";
+
+studentName.type = "text";
+studentName.placeholder = "Enter your full name";
+studentName.className = "student-input";
+
+studentCourse.className = "course-input";
+
+themeBtn.type = "button";
+themeBtn.textContent = "Change Theme";
+themeBtn.className = "theme-toggle";
+
+studentForm.className = "registration-form";
+
+//append registration card
+const profileContainer = document.querySelector(".profile-container"); //para sa css
+profileContainer.classList.add("profile-card"); 
+profileContainer.appendChild(welcomeMessage);
+profileContainer.appendChild(studentForm);
+profileContainer.appendChild(registrationMessage);
