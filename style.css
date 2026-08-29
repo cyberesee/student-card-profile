@@ -77,7 +77,11 @@ body.dark {
   font-weight: bold;
 }
 
+<<<<<<< HEAD
 /* fixed toggle */
+=======
+/* theme-toggle standalone, since your JS doesn't also add "btn" */
+>>>>>>> 6e8cd256c02aa7ccd34d7d7f083dc138cd40c322
 .theme-toggle {
   flex: 1;
   padding: 9px 10px;
