@@ -32,6 +32,7 @@ const welcomeMessage = document.createElement ("p");
 const studentName = document.createElement ("input");
 const studentCourse = document.createElement ("select");
 const themeBtn = document.createElement ("button");
+const registerBtn = document.createElement("button"); //para magkaroon ng functionality yung button
 const registrationMessage = document.createElement ("p");
 const studentForm = document.createElement ("form");
 
@@ -55,8 +56,18 @@ themeBtn.type = "button";
 themeBtn.textContent = "Change Theme";
 themeBtn.className = "theme-toggle";
 
+registerBtn.type = "submit";
+registerBtn.textContent = "Register";
+registerBtn.className = "btn btn-primary";
+
 registrationMessage.className = "registration-result"
 studentForm.className = "registration-form";
+
+//form
+studentForm.appendChild(studentName);
+studentForm.appendChild(studentCourse);
+studentForm.appendChild(registerBtn);
+studentForm.appendChild(themeBtn);
 
 //append registration card
 const profileContainer = document.querySelector(".profile-container"); //para sa css
@@ -64,5 +75,17 @@ profileContainer.classList.add("profile-card");
 profileContainer.appendChild(welcomeMessage);
 profileContainer.appendChild(studentForm);
 profileContainer.appendChild(registrationMessage);
+
+//part 1
+studentName.addEventListener("input", () => {
+  const value = studentName.value.trim();
+  if (value) {
+    welcomeMessage.textContent = `Welcome, ${value}!`;
+  } else {
+    welcomeMessage.textContent = "Please enter your name to begin registration.";
+  }
+});
+
+
 
 
